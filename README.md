@@ -78,3 +78,25 @@ helm version
 ![git init](image-12.png)
 
 ![git push](image-13.png)
+
+![values.yaml modify](image-14.png)
+
+![deployment.yaml modify](image-15.png)
+
+![git add .](image-16.png)
+
+![kubectl install](image-17.png)
+
+![minikube](image-18.png)
+
+![kubectl config](image-19.png)
+
+![minikube context](image-20.png)
+
+![helm install](image-21.png)
+
+![port forward](image-22.png)
+
+![handling](image-23.png)
+
+![welcome](image-24.png)
