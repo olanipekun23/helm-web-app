@@ -100,3 +100,80 @@ helm version
 ![handling](image-23.png)
 
 ![welcome](image-24.png)
+
+
+
+# Mini Project: Integrating Helm with Jenkins
+
+Automate Kubernetes deployments with **Helm** via a **Jenkins** CI/CD pipeline.  
+This guide walks you from setup to a working pipeline that upgrades/installs a Helm release on every git push.
+
+---
+
+## 🔭 What you’ll build
+
+Developer → Git Push → Jenkins Pipeline → Helm upgrade --install → Kubernetes
+
+
+- On each commit to your repo, Jenkins runs a pipeline that:
+  1) connects to your cluster,
+  2) lints and renders your chart,
+  3) deploys with `helm upgrade --install`.
+
+---
+
+## ✅ Prerequisites
+
+- A running Kubernetes cluster you can reach from your Jenkins agent (minikube/kind/EKS/GKE/AKS).
+- `kubectl` + **Helm 3** installed on the Jenkins agent node.
+- Jenkins (with default recommended plugins) and access to create a **Pipeline** job.
+- A git repository with a Helm chart at `./webapp`:
+
+
+
+webapp/
+├─ Chart.yaml
+├─ values.yaml
+└─ templates/
+
+
+- A kubeconfig that works with `kubectl` **from the Jenkins agent** (see “Provide cluster credentials to Jenkins”).
+
+---
+
+## 🧰 Prepare your environment
+
+### 1) Verify cluster access (from a terminal that mirrors your Jenkins agent)
+
+
+```bash
+kubectl version --client
+kubectl get nodes
+```
+### PROJECT STEPS
+
+![which helm](image-25.png)
+
+![systemctl](image-26.png)
+
+![Jenkins Dash](image-27.png)
+
+![Jenkinsfile](image-28.png)
+
+![Jenkinsfile config](image-29.png)
+
+![helm values.yaml](image-30.png)
+
+![helm deployment.yaml](image-31.png)
+
+![helm service.yaml](image-32.png)
+
+![jenkins pipeline](image-33.png)
+
+![config](image-34.png)
+
+![trigger config](image-35.png)
+
+![csript](image-36.png)
+
+![webapp](image-37.png)

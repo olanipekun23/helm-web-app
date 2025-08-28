@@ -23,10 +23,5 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           resources:
-            requests:
-              cpu: "100m"
-              memory: "128Mi"
-            limits:
-              cpu: "200m"
-              memory: "256Mi"
+            {{- toYaml .Values.resources | nindent 12 }}
 
