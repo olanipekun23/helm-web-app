@@ -177,3 +177,21 @@ kubectl get nodes
 ![csript](image-36.png)
 
 ![webapp](image-37.png)
+
+![start minikube](image-38.png)
+
+![update minikube](image-39.png)
+
+![pipeline fail](image-40.png)
+
+![jenkins link to kubectl](image-41.png)
+
+![chmod](image-42.png)
+
+![pipeline update](image-43.png)
+
+![success](image-44.png)
+
+![dashboard](image-45.png)
+
+![project executed](image-46.png)

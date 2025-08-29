@@ -4,16 +4,25 @@ pipeline {
   environment {
     RELEASE   = 'my-webapp'
     NAMESPACE = 'default'
-    CHART_DIR = 'webapp'
-    HELM      = '/usr/local/bin/helm'  // <-- replace with your actual helm path
-  }
+    CHART_DIR = 'WebApp'   // <-- must match the actual folder name
+    HELM      = '/usr/local/bin/helm'
+}
+
 
   options { timestamps() }
 
   stages {
     stage('Checkout') {
       steps { checkout scm }
-    }
+
+	stage('Checkout') {
+        steps {
+    checkout scm
+    sh 'ls -R'
+  }
+}
+
+
 
     stage('Set kube context') {
       steps {
